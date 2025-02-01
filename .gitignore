@@ -1,0 +1,6 @@
+# Ignore .env file (conains secrets)
+.env
+
+#.o
+#.out
+#.exe
