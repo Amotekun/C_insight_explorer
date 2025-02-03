@@ -6,6 +6,10 @@ int main()
     printf("\nWelcome to the file Explorer & AI Code Explainer in C!\n");
     printf("Type 'file()' to scan a directory or ask a direct question. Type 'quit' to exit.\n\n");
 
+    load_env_file(".env");
+
+    printf("Environment variables loaded. \n");
+
     char user_input[256];
     while (1)
     {

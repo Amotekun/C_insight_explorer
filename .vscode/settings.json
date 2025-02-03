@@ -1,5 +1,7 @@
 {
     "files.associations": {
-        "openai_client.h": "c"
+        "openai_client.h": "c",
+        "file_reader.h": "c",
+        "string.h": "c"
     }
 }
