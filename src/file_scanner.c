@@ -17,14 +17,24 @@ void scan_directory(const char *directory)
 
     printf("Scanning directory: %s\n", directory);
 
+    int file_count = 0;
+
     entry = readdir(dp);
 
-    while (entry != NULL)
+    while ((entry = readdir(dp)))
     {
         if (entry->d_type == DT_REG)
         {
-            printf("File not found: %s\n", entry->d_name);
+            printf("File found: %s\n", entry->d_name);
+            file_count++;
+        }
+
+        if (file_count > 1000)
+        {
+            printf("Too many files, stopping...\n");
+            break;
         }
     }
     closedir(dp);
+    printf("Scan completed. Total files found: %d\n", file_count);
 }

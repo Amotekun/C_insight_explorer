@@ -61,6 +61,7 @@ char *get_explanation(const char *prompt)
         char post_fields[512];
         snprintf(post_fields, sizeof(post_fields), "{\"model\": \"gpt-4\", \"messages\": [{\"role\": \"system\", \"content\": \"You are a knowledgeable AI that explains code.\"}, {\"role\": \"user\", \"content\": \"%s\"}]}", prompt);
 
+        printf("DEBUG: API URL being used: %s\n", API_URL);
         curl_easy_setopt(curl, CURLOPT_URL, API_URL);
         curl_easy_setopt(curl, CURLOPT_HTTPHEADER, headers);
         curl_easy_setopt(curl, CURLOPT_POSTFIELDS, post_fields);

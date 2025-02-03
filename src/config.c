@@ -38,3 +38,14 @@ void load_env_file(const char *filename)
 
     fclose(file);
 }
+
+const char *get_api_key()
+{
+    const char *key = getenv("OPENAI_API_KEY");
+    if (key == NULL || strlen(key) == 0)
+    {
+        fprintf(stderr, "Error: API key missing!\n");
+        return "";
+    }
+    return key;
+}
