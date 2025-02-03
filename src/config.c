@@ -25,6 +25,13 @@ void load_env_file(const char *filename)
 
         if (key && value)
         {
+            if (value[0] == '"' && value[strlen(value)] - 1 == '"')
+            {
+                value[strlen(value) - 1] = '\0';
+                value++;
+            }
+
+            printf("Setting Env: %s = %s\n", key, value);
             setenv(key, value, 1);
         }
     }

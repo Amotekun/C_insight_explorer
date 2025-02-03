@@ -10,6 +10,7 @@ int main()
     printf("Type 'file()' to scan a directory or ask a direct question. Type 'quit' to exit.\n\n");
 
     load_env_file(".env");
+    printf("API key from env: %s\n", getenv("OPENAI_API_KEY"));
 
     printf("Environment variables loaded. \n");
 
