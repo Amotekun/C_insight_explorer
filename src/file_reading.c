@@ -5,7 +5,7 @@
 
 char *read_file(const char *file_path)
 {
-    FILE *file = fopen(file_path, 'r');
+    FILE *file = fopen(file_path, "r");
     if (!file)
     {
         printf("Error opening file: %s\n", file_path);

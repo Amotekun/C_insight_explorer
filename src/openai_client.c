@@ -50,7 +50,7 @@ char *get_explanation(const char *prompt)
 
     if (curl)
     {
-        struct curl_s_list *headers = NULL; // pointer to store HTTP headers
+        struct curl_slist *headers = NULL; // pointer to store HTTP headers
 
         // this is also used to create and manage linked lists of HTTP headers for cURL requests.
         headers = curl_slist_append(headers, "Content-Type: application/json");

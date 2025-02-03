@@ -1,5 +1,8 @@
 #include <stdio.h>
 #include <string.h>
+#include "config.h"
+#include "process_files.h"
+#include "interactive_mode.h"
 
 int main()
 {
@@ -26,7 +29,7 @@ int main()
         }
         else if (strcmp(user_input, "quit()") == 0)
         {
-            print("\n[Exciting...]\n");
+            printf("\n[Exciting...]\n");
             break;
         }
         else
